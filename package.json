@@ -1,0 +1,26 @@
+{
+  "name": "extract-content-javascript",
+  "version": "1.0.0",
+  "description": "Text extraction JavaScript library",
+  "main": "lib/extract-content-all.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jumbojett/extract-content-javascript.git"
+  },
+  "keywords": [
+    "extract",
+    "content",
+    "page",
+    "google",
+    "adsense"
+  ],
+  "author": "Ina Lintro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jumbojett/extract-content-javascript/issues"
+  },
+  "homepage": "https://github.com/jumbojett/extract-content-javascript#readme"
+}
