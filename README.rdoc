@@ -1,30 +1,30 @@
 
 = ExtractContentJS
 
-本文抽出 JavaScript ライブラリ
+Text extraction JavaScript library
 
-== やれること
+== You can do it
 
-- 本文抽出
-- タグおすすめ
+- Text extraction
+- Tag Recommended
 
-== ファイル
+== File
 
-基本的には以下をこの順に読み込めば動く:
-[lib/lib.js] 共通するもの
+Basically, moving it to read the following in this order:
+[Lib / lib.js] thing in common
 [lib/extract-content.js] 本文抽出
 
-リポジトリのルートでmake packageするとこれらを連結した extract-content-all.js が生成される.
+The repository of route make package Then extract-content-all.js that is the concatenation of these are generated.
 
-実際の使い方を詳しく見たくなったら:
+When you see you want to detail the actual use:
 [sketch/extract-content.test.js] 本文抽出テスト
-[lib/scoring-words.js] タグのスコアリング(サンプル)
+[Lib / scoring-words.js] scoring tag (sample)
 
-== 使い方
+== How to use
 
-=== 本文抽出インタフェース
+=== Text extraction interface
 
-本文抽出だけしたい/ハンドラを指定したい場合に使う.
+Use if you want to specify that you want / handler only text extraction.
 
 ==== ExtractContentJS.LayeredExtractor
 
@@ -38,27 +38,27 @@
   if (res.isSuccess) {
       res.url;   // URL string
       res.title; // title string
-      res.engine; // 抽出に用いたハンドラそのもの
-      res.content; // コンテンツクラスのインスタンス(後述)
+      res.engine; // handler itself used for extraction
+      res.content; // content class of an instance (see below)
   }
 
-ハンドラはいまのところHeuristicsのみ実装済み.
+Handler is far Heuristics only been implemented.
 
-==== コンテンツクラス
+==== Content class
 
-  content.asLeaves(); // 本文だと判定された葉ノードを含む葉クラスインスタンス(後述)の配列を返す
-  content.asNode(); // すべての葉ノードの共通の祖先のうち最深のものを返す
-  content.asTextFragment(); // asLeaves()に含まれるノードのテキストを連結したものを返す
-  content.toString(); // asNode()のtextContentを返す
+  Returns an array of // body's determined to be leaves class instance that contains the leaf node (see below); content.asLeaves ()
+  content.asNode (); // return the things of the deepest of the common ancestor of all of the leaf nodes
+  content.asTextFragment (); return a concatenation of the text of the node that is included in the // asLeaves ()
+  Return the textContent of // asNode (); content.toString ()
 
-==== 葉クラス
+==== Leaf class
 
-  leaf.node; // 葉ノード
-  leaf.depth; // ノードのbodyからの深さ
+  leaf.node; // leaf node
+  leaf.depth; // depth from the body of the node
 
 == AUTHOR
 
-INA Lintaro
+Ina Lintro
 
 == Copryright
 
@@ -73,4 +73,3 @@ Copyright (c) 2007/2008 Nakatani Shuyo / Cybozu Labs Inc. All rights reserved.
 == LICENCE
 
 MIT License
-
